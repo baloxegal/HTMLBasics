@@ -1,0 +1,13 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "es5",
+        "removeComments": true,
+        // "outDir": "HTMLBasics",
+        "sourceMap": true,
+        // "outFile": "app.js"
+    },
+    // "files":[
+    //     "app.ts"
+    // ]
+}

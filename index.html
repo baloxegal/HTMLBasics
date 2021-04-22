@@ -12,7 +12,14 @@
             border-radius: 50px;
             padding: 15px;
             margin: 15px;
-            background-color: green;
+            background-color: rgb(205, 255, 243);
+        }
+        body{
+            background-color: deepskyblue;
+        }
+
+        footer{
+            background-color: lightsalmon;
         }
 
     </style>
@@ -21,14 +28,21 @@
 
 </head>
 <body> 
-    
+    <footer>
+
+    </footer>
     <h1 align="center">This is a great thing</h1>
     <h3 align="center">Were is it?</h3>
     <p align="center">
-        <img height="300px" width="600" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmC7DcepxhuY3pkN0LZkkas-FPmNYBL6sn3Q&usqp=CAU" alt="">
-        <a href="https://google.com">This is here</a>
-        <p id ="am">
-            
+        <img height="151px" width="270" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmC7DcepxhuY3pkN0LZkkas-FPmNYBL6sn3Q&usqp=CAU" alt="">
+        <p align="center">
+            <a href="https://google.com">This is here</a>
+        </p>        
+        <p align="center" id ="am">
+            <img src="best-ford-muscle-cars.jpg" alt="">
+        </p>
+        <p align="center" id="ma">
+
         </p>
     </p>
     <div id="di" align="center">        
@@ -40,16 +54,17 @@
         document.write(h());
         document.write("<br>");
         document.write(w());
-        document.getElementById("am").innerHTML=h();
-        document.getElementById("am").innerHTML=w();
-        document.getElementById("am").innerHTML="OK";
+        document.getElementById("ma").innerHTML=h();
+        document.getElementById("ma").innerHTML=w();
+        document.getElementById("ma").innerHTML="OK" + "<br>";
+        
         console.log(h());
         console.log(w());
 
-        var v = document.getElementById("am");
+        var v = document.getElementById("ma");
         var hm = h();
         var wm = document.createTextNode(hm);
-        v.appendChild(wm);
+        v.appendChild(wm);        
 
         var par = document.createElement("p")
         var ar = document.createTextNode("URA")
@@ -57,6 +72,10 @@
         document.getElementById("di").appendChild(par)
 
     </script> 
+
+    <div id="content"></div>
+    <script src="app.js"></script>
+    
 </body>
 </html>
 
