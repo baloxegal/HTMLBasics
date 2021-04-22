@@ -7,7 +7,7 @@
     <title>Basic Document</title>
     <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmC7DcepxhuY3pkN0LZkkas-FPmNYBL6sn3Q&usqp=CAU" type="image/x-icon">
     <style>
-        h1 {
+        h1, h3  {
             border: 5px solid red;
             border-radius: 50px;
             padding: 15px;
@@ -27,28 +27,91 @@
     
 
 </head>
-<body> 
+<body onload="checkCookies()"onchange="checkCookies()"> 
+
+    <p id="cookies">
+
+    </p>
+
+    <p id="address">
+
+    </p>
+
+    <h1 align="center" onmousedown="this.innerHTML='Ooops!'" onmouseup="this.innerHTML='Uuups!'" onmouseover="this.innerHTML='Yes!'"
+     onmouseout="this.innerHTML='No!'">HELLO!</h1>
+
+    <h3 align="center" onclick="modifyText(this)">GOOD BUY!</h3>
+    
+    <input type="text" id="fname" onchange="myInputFunction()">
+
+    <input type="mail" id="mail" placeholder="aaa@fsd.com">
+
+    <input type="password" id="pass" placeholder="pass">
+
     <footer>
 
     </footer>
+
+    <p id="hys">
+        HYSTORY
+    </p>
+
+
     <h1 align="center">This is a great thing</h1>
-    <h3 align="center">Were is it?</h3>
+    <h3 id="dd" align="center">Were is it?</h3>
     <p align="center">
         <img height="151px" width="270" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmC7DcepxhuY3pkN0LZkkas-FPmNYBL6sn3Q&usqp=CAU" alt="">
         <p align="center">
             <a href="https://google.com">This is here</a>
         </p>        
-        <p align="center" id ="am">
+        <p id="am">
             <img src="best-ford-muscle-cars.jpg" alt="">
         </p>
         <p align="center" id="ma">
-
+            
         </p>
     </p>
     <div id="di" align="center">        
         <a href="https://amdaris.com">And here</a>
     </div>
     <script>
+
+        // history.back() - same as clicking back in the browser
+        // history.forward() - same as clicking forward in the browser
+
+        document.getElementById("hys").addEventListener("click", history.back());
+
+        document.getElementById("address").innerHTML = window.location.href + "<br>" + window.location.protocol + "<br>" + window.location.hostname;
+
+        document.getElementById("dd").addEventListener("click", myClickFunction);
+
+        function myClickFunction() {
+            alert ("Hello World!");
+        }        
+
+        function myInputFunction() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+            x.style.backgroundColor = "#1ec5e5";
+        }
+
+        function checkCookies() {
+            var text = "";
+            if (navigator.cookieEnabled == true) {
+                text = "Cookies are enabled.";
+            } else {
+                text = "Cookies are not enabled.";
+            }
+            document.getElementById("cookies").innerHTML = text;
+        }
+
+
+        function modifyText(id) { 
+            id.innerHTML = "Ulalalalal!";
+        }
+
+        document.getElementById("am").setAttribute("align", "center");
+
         function h (){return window.screen.height };
         function w (){return window.screen.width };
         document.write(h());
@@ -71,6 +134,9 @@
         par.appendChild(ar)
         document.getElementById("di").appendChild(par)
 
+        // let c = document.getElementById("dd");
+        // document.getElementById("dd").onclick = c => c.innerHTML = "FANCY!";
+        
     </script> 
 
     <div id="content"></div>
